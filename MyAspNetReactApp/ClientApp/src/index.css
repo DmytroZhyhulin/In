@@ -1,0 +1,13 @@
+.app {
+  display: flex;
+}
+.form-left {
+  margin-right: 20px;
+}
+.template-right {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.actions {
+  margin: 10px 0;
+}
