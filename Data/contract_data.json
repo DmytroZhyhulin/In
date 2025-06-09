@@ -1,0 +1,27 @@
+{
+  "contract_number": "15/2025",
+  "city": "Київ",
+  "agreement_date": "2025-06-09",
+  "provider_name": "ТОВ \"Інноваційні Рішення\"",
+  "provider_basis": "Статуту",
+  "client_name": "ТОВ \"Замовник Плюс\"",
+  "client_basis": "Статуту",
+  "services": [
+    { "name": "Консультаційні послуги", "description": "Надання консультацій щодо оптимізації бізнес-процесів" },
+    { "name": "Розробка програмного забезпечення", "description": "Створення корпоративного порталу" }
+  ],
+  "services_end_date": "2025-08-31",
+  "total_price": "50000",
+  "total_price_words": "п'ятдесят тисяч гривень 00 копійок",
+  "prepayment_required": true,
+  "prepayment_amount": "20000",
+  "prepayment_days": "5",
+  "payment_days": "10",
+  "agreement_end_date": "2025-12-31",
+  "client_address": "м. Київ, вул. Велика Васильківська, 10",
+  "client_edrpou": "12345678",
+  "client_bank_details": "р/р UA123456789012345678901234567890 в АТ \"Укрбанк\"",
+  "provider_address": "м. Київ, вул. Хрещатик, 15",
+  "provider_edrpou": "87654321",
+  "provider_bank_details": "р/р UA987654321098765432109876543210 в АТ \"Промбанк\""
+}

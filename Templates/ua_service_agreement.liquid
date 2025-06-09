@@ -1,0 +1,61 @@
+<h1 style="text-align: center;">ДОГОВІР № {{ contract_number }}  
+на надання послуг</h1>
+
+<p>м. {{ city }}, {{ agreement_date | date: "%d.%m.%Y" }}</p>
+
+<p>{{ provider_name }}, що діє на підставі {{ provider_basis }}, надалі — "Виконавець", з однієї сторони,  
+та {{ client_name }}, що діє на підставі {{ client_basis }}, надалі — "Замовник", з іншої сторони,  
+уклали цей Договір про наступне:</p>
+
+<h2>1. Предмет Договору</h2>
+
+<p>1.1. Виконавець зобов'язується надати Замовнику наступні послуги:</p>
+
+<ul>
+{% for service in services %}
+  <li>{{ service.name }} — {{ service.description }}</li>
+{% endfor %}
+</ul>
+
+<h2>2. Строки надання послуг</h2>
+
+<p>2.1. Послуги повинні бути надані у строк до {{ services_end_date | date: "%d.%m.%Y" }}.</p>
+
+<h2>3. Вартість послуг та порядок розрахунків</h2>
+
+<p>3.1. Загальна вартість послуг складає {{ total_price }} грн ({{ total_price_words }}).</p>
+
+{% if prepayment_required %}
+<p>3.2. Передплата у розмірі {{ prepayment_amount }} грн здійснюється протягом {{ prepayment_days }} робочих днів з моменту підписання Договору.</p>
+{% else %}
+<p>3.2. Розрахунок здійснюється після надання послуг протягом {{ payment_days }} робочих днів на підставі рахунку-фактури.</p>
+{% endif %}
+
+<h2>4. Відповідальність сторін</h2>
+
+<p>4.1. Сторони несуть відповідальність за невиконання або неналежне виконання зобов'язань за цим Договором відповідно до чинного законодавства України.</p>
+
+<h2>5. Інші умови</h2>
+
+<p>5.1. Цей Договір набирає чинності з моменту його підписання та діє до {{ agreement_end_date | date: "%d.%m.%Y" }}.</p>
+
+<h2>6. Реквізити сторін</h2>
+
+<table style="width:100%; border:1px solid black;">
+<tr>
+  <td style="width:50%; vertical-align:top;">
+    <strong>Замовник:</strong><br/>
+    {{ client_name }}<br/>
+    {{ client_address }}<br/>
+    {{ client_edrpou }}<br/>
+    {{ client_bank_details }}<br/>
+  </td>
+  <td style="width:50%; vertical-align:top;">
+    <strong>Виконавець:</strong><br/>
+    {{ provider_name }}<br/>
+    {{ provider_address }}<br/>
+    {{ provider_edrpou }}<br/>
+    {{ provider_bank_details }}<br/>
+  </td>
+</tr>
+</table>
