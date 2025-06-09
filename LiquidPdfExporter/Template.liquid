@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liquid PDF Example</title>
+</head>
+<body>
+    <h1>Hello {{ user.name }}</h1>
+    <p>Email: {{ user.email }}</p>
+    <ul>
+    {% for item in user.items %}
+        <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
